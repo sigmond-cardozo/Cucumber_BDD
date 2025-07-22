@@ -1,0 +1,17 @@
+Plugins
+    maven integration plugin
+    cucumber reports
+    AnsiColor
+
+enable This project is parameterized
+    tag
+    threadCount         (WIP)
+    BrowserType
+
+Color ANSI Console Output       (optional)
+
+clean compile test -Dcucumber.filter.tags="(@${tag} and (not @ignore))" -Ddataprovidethreadcount=${threadCount} -DbrowserType=${browserType}
+
+Post-build Actions
+     Cucumber reports
+     JSON Reports Path: src folder full path \target
